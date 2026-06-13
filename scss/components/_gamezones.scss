@@ -1,0 +1,212 @@
+@use "../mixins/mixins" as mixin;
+@use "../variables/var_index" as *;
+
+.zones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+    width: 1600px;
+    background-color: #151515;
+    background-image: url(../scss/assets/GEO-TERRAIN4-20\ 1.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    color: aliceblue;
+
+    fieldset {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly; 
+        gap: 10px;
+        padding: 20px;
+        align-items: center;
+        border-radius: 70px;
+        border: 3px solid #FFFFFF;
+        width: 1400px;
+        height: 700px;
+
+        legend {
+            text-align: center;
+            font-size: 43px;
+            font-weight: 300;
+            padding: 0 20px;
+
+        }
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;  
+            justify-content: space-evenly;         
+            margin: 20px;
+            background-color: #1F1F1F;
+            width: 350px;
+            height: 550px;
+            border-radius: 30px;
+            border: 3px solid #ffffff23;
+            outline: 20px solid #1F1F1F;   
+            font-size: 30px;
+            font-weight: 300;
+            transition: 0.3s;
+
+            &:hover {
+                transform: translateY(-10px) translateX(-10px);
+                background-color: #313131;
+            }
+
+            p {
+                color: #FFFFFF4D;
+            }
+
+            h1 {
+                font-size: 40px;
+                font-weight: 900;
+                font-style: italic;
+            }
+        }
+
+        .box1 {
+            img {
+                width: 250px;
+                border: 3px solid #E637B7;
+                border-radius: 10px;
+                padding: 20px;
+            }
+            a {
+                color: #E637B7;
+            }
+        }
+
+        .box2 {
+            img {
+                width: 250px;
+                border: 3px solid #149EF2;
+                border-radius: 10px;
+                padding: 20px;
+            }
+            a {
+                color: #149EF2;
+            }
+        }
+
+        .box3 {
+            img {
+                width: 250px;
+                border: 3px solid #3A4EFF;
+                border-radius: 10px;
+                padding: 20px;
+            }
+            a {
+                color: #3A4EFF;
+            }
+        }
+    }
+}
+
+// ====================================================
+
+@include mixin.media(mobile) {
+
+.zones {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: min(1740px, 230vh);
+    width: min(460px, 100vw);
+
+    background-color: #151515;
+    background-image: url(../scss/assets/GEO-TERRAIN4-20\ 1.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: aliceblue;
+
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        align-items: center;
+        border-radius: 70px;
+        border: 3px solid #ffffff00;
+
+
+        legend {
+            position: relative;
+            top: 10px;
+            text-align: center;
+            font-size: 2.1rem;
+            font-weight: 300;
+            padding: 0 20px;
+
+        }
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;  
+            justify-content: space-evenly;         
+            margin: 20px;
+            background-color: #1F1F1F;
+            width: min(300px, 100vw);
+            height: min(550px, 100vh);
+            border-radius: 30px;
+            border: 3px solid #ffffff23;
+            outline: 20px solid #1F1F1F;   
+            font-size: 1.5rem;
+            font-weight: 300;
+            transition: 0.3s;
+
+            &:hover {
+                transform: translateY(-10px) translateX(-10px);
+                background-color: #313131;
+            }
+
+            p {
+                color: #FFFFFF4D;
+            }
+
+            h1 {
+                font-size: 2rem;
+                font-weight: 900;
+                font-style: italic;
+            }
+        }
+
+        .box1 {
+            img {
+                width: 250px;
+                border: 3px solid #E637B7;
+                border-radius: 10px;
+                padding: 20px;
+            }
+            a {
+                color: #E637B7;
+            }
+        }
+
+        .box2 {
+            img {
+                width: 250px;
+                border: 3px solid #149EF2;
+                border-radius: 10px;
+                padding: 20px;
+            }
+            a {
+                color: #149EF2;
+            }
+        }
+
+        .box3 {
+            img {
+                width: 250px;
+                border: 3px solid #3A4EFF;
+                border-radius: 10px;
+                padding: 20px;
+            }
+            a {
+                color: #3A4EFF;
+            }
+        }
+    }
+}
+}

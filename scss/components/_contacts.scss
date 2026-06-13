@@ -1,0 +1,147 @@
+@use "../variables/var_index" as *;
+@use "../mixins/mixins" as mixin;
+
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+    width: 1600px;
+    background-color: #151515;
+    background-image: url(../scss/assets/GEO-TERRAIN4-20\ 1.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    color: aliceblue;
+
+    .contact-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1400px;
+        line-height: 1.4;
+        gap: 20px;
+
+        .find-us {
+            background-color: #4744442f;
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            height: 550px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
+
+            h1 {
+            font-size: 50px;
+            font-weight: 900;
+            font-style: italic;
+            }
+
+            * * span, * span {
+                font-weight: 700;
+            }
+
+            button {
+            border-radius: 10px;
+            border: none;
+            width: 300px;
+            height: 50px;
+            color: #E73AB8;
+
+                &:active {
+                    background-color: #52088f65;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .map {
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+// ================================================
+
+@include mixin.media(mobile) {
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: min(1140px, 160vh);
+    width: min(420px, 100vw);
+    background-color: #151515;
+    background-image: url(../scss/assets/GEO-TERRAIN4-20\ 1.svg);
+    background-position: center;
+    background-size: cover;
+    color: aliceblue;
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.4;
+        gap: 20px;
+
+        .find-us {
+            background-color: #4744442f;
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            height: 60vh;
+            width: 80vw;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
+
+            h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            font-style: italic;
+            }
+
+            * * span, * span {
+                font-weight: 700;
+            }
+
+            button {
+            border-radius: 10px;
+            border: none;
+            width: 14rem;
+            height: 4vh;
+            color: #E73AB8;
+
+                &:active {
+                    background-color: #52088f65;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .map {
+            width: 80vw;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+
+}

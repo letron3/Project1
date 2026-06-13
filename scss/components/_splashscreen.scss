@@ -1,0 +1,213 @@
+@use "../mixins/mixins" as mixin;
+@use "../variables/var_index" as *;
+
+.splash_block {
+    position: relative;
+    display: flex;
+
+    height: 900px;
+    width: 1600px;
+    background-image: url(../scss/assets/Rectangle_3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: contrast(120%);
+
+    &:after {
+    position: absolute;
+    content:"";
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0px;
+    background: linear-gradient(to left, rgba(255,0,0,0) 0%,#35005F 100%);
+    }
+
+    .Nav_menu {
+        position: absolute;
+        left: -375px;
+        z-index: 9;
+        transform: rotate(90deg);
+        transform-origin: center;
+        display: inline-flex;
+        align-items: end;
+        align-self: center;
+        height: 50px;
+
+        li {
+            padding: 15px;
+
+            a {
+                font-size: 24px;
+                color: aliceblue;
+                &:active {
+                    color: rgb(17, 103, 179);
+                }
+                &:hover {
+                    transition: 0.3s;
+                    color: rgb(37, 108, 170);  
+                }
+            }
+        }
+    }
+
+    .splash_info {
+        display: inline-flex;
+        flex-direction: column;
+        align-self: center;
+        gap: 50px;
+
+        justify-content: center;
+        width: 800px;
+        position: absolute;
+        left: 250px;
+        z-index: 9;
+        color: aliceblue;
+
+
+        .frontblock {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+
+            img {
+                display: block;
+                width: 130px;
+            }
+            
+            .textblock {
+                h1{
+                    font-size: 100px;
+                    font-weight: 900;
+                    font-style: italic;
+                }
+                h3 {
+                    font-size: 45px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        ul {
+            line-height: 1.5;
+
+            li {
+                font-size: 30px;
+                font-weight: 300;
+                list-style: inside;
+            }
+        }
+
+        button {
+            border-radius: 10px;
+            border: none;
+            width: 300px;
+            height: 50px;
+            color: #E73AB8;
+
+            &:active {
+                background-color: #52088f65;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+// ================================================
+
+@include mixin.media(mobile) {
+
+.splash_block {
+    position: relative;
+    display: flex;
+
+    height: min(740px, 90vh);
+    width: min(460px, 100vw);
+
+    background-image: url(../scss/assets/Rectangle_3.png);
+    background-position: 100%;
+
+    background-size: 200vh;
+    filter: contrast(120%);
+
+    &:after {
+    position: absolute;
+    content:"";
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0px;
+    background: linear-gradient(to left, rgba(255,0,0,0) 0%,#35005F 100%);
+    }
+
+    .Nav_menu {
+        display: none; 
+    }
+
+    .splash_info {
+        position: relative;
+        left: 45px;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        gap: 15px;
+
+        width: 20rem;
+        z-index: 9;
+        color: aliceblue;
+
+
+        .frontblock {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 20px;
+
+            img {
+                display: block;
+                width: 5rem;
+            }
+            
+            .textblock {
+                h1{
+                    font-size: 2.2rem;
+                    font-weight: 900;
+                    font-style: italic;
+                }
+                h3 {
+                    font-size: 1rem;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        ul {
+            li {
+                font-size: 1.3rem;
+                font-weight: 300;
+                list-style: inside;
+            }
+        }
+
+        button {
+            border-radius: 10px;
+            border: none;
+            width: 12rem;
+            height: 2rem;
+            color: #E73AB8;
+
+            &:active {
+                background-color: #52088f65;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+}

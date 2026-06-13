@@ -1,0 +1,23 @@
+
+
+$maingrid:  "upper_header upper_header"
+            "aside message_grid";
+
+.upper_header  { grid-area: upper_header; }
+.aside         { grid-area: aside; }
+.message_grid  { grid-area: message_grid; }
+
+/* ----------------------------------------------------- */
+
+$desktopgrid: "star sender message_text attach date";
+
+$mobilegrid:    "star sender attach date"
+                ". message_text . .";
+
+/* ----------------------------------------------------- */
+
+.star       { grid-area: star; }
+.sender     { grid-area: sender; }
+.attach     { grid-area: attach; }
+.date       { grid-area: date; }
+.message_text { grid-area: message_text;}

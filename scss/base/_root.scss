@@ -1,0 +1,21 @@
+@use "../variables/var_index" as *;
+@use "../mixins/mixins" as mixin;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: $headFontFamily;
+    font-size: $headFontSize;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: $primaryBGcolor;
+}

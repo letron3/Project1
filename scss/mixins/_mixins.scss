@@ -1,0 +1,32 @@
+@mixin flex-normal($justify:center, $align:center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// ---------------------------------------------------------------------
+
+@mixin grid-normal($justify:center, $align:center) {
+    display: grid;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// ---------------------------------------------------------------------
+
+@mixin media($size) {
+    @if $size == mobile {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }    
+
+}
+
+// ---------------------------------------------------------------------
+
+@mixin text_overflow() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
