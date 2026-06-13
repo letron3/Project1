@@ -68,7 +68,7 @@ body {
   display: flex;
   height: 900px;
   width: 1600px;
-  background-image: url(../scss/assets/Rectangle\ 3.png);
+  background-image: url(../scss/assets/Rectangle_3.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -190,7 +190,7 @@ body {
     display: flex;
     height: min(740px, 90vh);
     width: min(460px, 100vw);
-    background-image: url(../scss/assets/Rectangle\ 3.png);
+    background-image: url(../scss/assets/Rectangle_3.png);
     background-position: 100%;
     background-size: 200vh;
     -webkit-filter: contrast(120%);
@@ -283,7 +283,7 @@ body {
   height: 900px;
   width: 1600px;
   background-color: #151515;
-  background-image: url(../scss/assets/GEO-TERRAIN4-20\ 1.svg);
+  background-image: url(../scss/assets/GEO-TERRAIN4-20.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -370,7 +370,7 @@ body {
     height: min(1140px, 160vh);
     width: min(420px, 100vw);
     background-color: #151515;
-    background-image: url(../scss/assets/GEO-TERRAIN4-20\ 1.svg);
+    background-image: url(../assets/GEO-TERRAIN4-20.svg);
     background-position: center;
     background-size: cover;
     color: aliceblue;
@@ -854,7 +854,7 @@ body {
             align-items: center;
     height: min(340px, 100vh);
     width: min(420px, 100vw);
-    background-image: url(../assets/Shape\ branco\ -\ @manow\ \(20\)\ 2.svg);
+    background-image: url(../assets/Shapebranco_11.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 20%;
@@ -970,7 +970,7 @@ body {
   height: 900px;
   width: 1600px;
   background-color: #151515;
-  background-image: url(../scss/assets/GEO-TERRAIN4-20\ 1.svg);
+  background-image: url(../scss/assets/GEO-TERRAIN4-20.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1084,7 +1084,7 @@ body {
     height: min(1740px, 230vh);
     width: min(460px, 100vw);
     background-color: #151515;
-    background-image: url(../scss/assets/GEO-TERRAIN4-20\ 1.svg);
+    background-image: url(../assets/GEO-TERRAIN4-20.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1348,7 +1348,7 @@ body {
   padding: 20px;
 }
 .popover-window:before {
-  content: url(../scss/assets/arrows/Vector\ 1.svg);
+  content: url(../scss/assets/arrows/Vector_1.svg);
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
   position: absolute;
@@ -1356,7 +1356,7 @@ body {
   right: 0px;
 }
 .popover-window:after {
-  content: url(../scss/assets/arrows/Vector\ 2.svg);
+  content: url(../scss/assets/arrows/Vector_2.svg);
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
   position: absolute;
